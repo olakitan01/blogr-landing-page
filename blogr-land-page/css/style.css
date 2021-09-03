@@ -1,0 +1,385 @@
+
+@import url("../css/fonts.css");
+
+
+html,body{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+:root{
+
+    /* theme colors */
+    --CTA-text: hsl(356, 100%, 66%);
+    --CTA-hover: hsl(355, 100%, 74%);
+    --text-white: hsl(0, 0%, 100%);
+    --footer-text: hsl(240, 2%, 79%);
+    --body-copy: hsl(207, 13%, 34%);
+    --footer-bg: hsl(240, 10%, 16%);
+    --bd-text: hsl(237, 17%, 21%);
+    --bd-head: hsl(208, 49%, 24%);
+
+
+    /*  linear gradients */
+    --CTA: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+
+    /* theme font-family */
+    --Overpass: 'Overpass', Sans-serif;
+    --Ubuntu: 'Ubuntu', Sans-serif;
+}
+
+/* --------------- Global Classes --------------- */
+
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--text-white);
+}
+.nav .sub-menu .sub-link a{
+    color: var(--bd-text) !important;
+}
+
+li{
+    list-style: none;
+}
+
+.main-menu .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1rem;
+    font-family: var(--Ubuntu);
+    position: relative;
+}
+
+.sub-menu .sub-link{
+    padding: 0 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: var(--Ubuntu);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cta-btn button{
+    padding: 0.6rem 1rem;
+    border: 0;
+    text-transform: capitalize;
+    width: 120px;
+    border-radius: 20px;
+    color: var(--CTA-text);
+    font-family: var(--Overpass);
+    font-weight: 700;
+    background: var(--text-white);
+    cursor: pointer;
+}
+
+.cta-btn button:hover{
+    background: var(--CTA-hover);
+    color: var(--text-white);
+}
+
+
+p{
+    font-size: var(--Overpass);
+    font-size: 0.8rem;
+    padding: 0;
+}
+
+h2{
+    font-family: var(--Ubuntu);
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+
+h3{
+    font-family: var(--Ubuntu);
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.illustration{
+    position: relative;
+    width: 90%;
+    padding: 2.5rem 2rem;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* -------x-------- Global Classes --------x------- */
+
+.upper-content{
+    width: 100%;
+    height: 380px;
+    position: relative;
+    border-radius: 0 0 0 50px;
+    padding: 10px;
+    background-image: url(../images/bg-pattern-intro.svg), var(--CTA);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+/*--------------- navbar ---------------*/
+
+.nav{
+    padding: 0 2rem;
+    height: 0;
+    min-height: 15vh;
+    transition: height 1s ease;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .main-menu{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.nav .main-menu .nav-link .sub-menu{
+    display: none;
+}
+
+/* ---------- hover effect ---------- */
+
+.nav .main-menu .nav-link a:hover{
+    text-decoration: underline;
+}
+
+.nav .main-menu .nav-link:hover .sub-menu{
+    position: absolute;
+    top: 3.2rem;
+    left: -0.5rem;
+    display: block;
+    width: 150px;
+    height: auto;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    background-color: var(--text-white);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav .sub-menu .sub-link:hover a{
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* ---------- x ----- hover effect ---------- x ----- */
+
+.nav .toggle-menu{
+    position: absolute;
+    top: 0;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-menu .toggle-icon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 1.7rem 0.5rem;
+}
+
+.nav .toggle-menu .toggle-icon i{
+    font-size: 1.4rem;
+    color: var(--text-white);
+}
+
+.nav .nav-brand img{
+    width: 4rem;
+    height: auto;
+    padding: 1.2rem 1.5rem;
+    margin-left: 80px;
+    display: block;
+}
+
+.nav .nav-btn{
+    padding: 1.2rem 1rem;
+    margin-right: 80px;
+    margin-left: auto;
+}
+
+
+/*------x--------- navbar --------x-------*/
+
+
+/*--------------- main site section ---------------*/
+
+.main .main-content{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    color: var(--text-white);
+    font-family: var(--Ubuntu);
+}
+
+.main .main-content h1{
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.main-btn button{
+    margin-top: 1rem;
+}
+
+/*------x--------- main site section --------x-------*/
+
+
+/*--------------- editor section ---------------*/
+
+.illustration .content{
+    width: 40%;
+    padding: 0 2rem;
+}
+
+.illustration .text{
+    margin-left: 150px;
+}
+
+.illustration .bd-edit{
+   margin-right: -120px;
+}
+
+.illustration .bd-img img{
+    height: 550px;
+}
+
+.illustration .content h2{
+    position: absolute;
+    top: 8%;
+    left: 42%;
+}
+
+/*------x--------- editor section --------x-------*/
+
+
+/*--------------- phone section ---------------*/
+
+.art{
+    width: 95%;
+    height: 250px;
+    border-radius: 0 80px 0 80px;
+    background-image: url("images/bg-pattern-circles.svg"), linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-position: left;
+    background-repeat: no-repeat;
+    color: var(--text-white);
+}
+
+.illustration .phone img{
+    position: absolute;
+    top: -4rem;
+    left: 8rem;
+    height: 500px;
+}
+
+
+/*-------x-------- phone section -------x--------*/
+
+
+/*--------------- laptop section ---------------*/
+
+.illustration .content{
+    width: 40%;
+    padding: 0 2rem;
+}
+
+.illustration .txt{
+    margin-right: 100px;
+}
+
+.illustration .bd-laptop{
+   margin-left: -285px;
+}
+
+
+/*------x--------- laptop section --------x-------*/
+
+
+/*--------------------- footer -------------------*/
+
+.footer-content{
+    width: 97%;
+    height: 250px;
+    position: relative;
+    border-radius: 0 80px 0 0;
+    padding: 20px;
+    margin: 0 auto;
+    background: var(--footer-bg);
+}
+
+.foot-nav{
+    padding: 1rem;
+    width: 90%;
+}
+
+.foot-nav .foot-brand img{
+    width: 4rem;
+    height: auto;
+    padding: 1rem 1.5rem;
+    margin-left: 100px;
+    display: block;
+}
+
+.foot-menu{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 130px;
+}
+
+.foot-link{
+    width: 25%;
+    height: 200px;
+}
+
+.foot-menu .foot-link .sub-menu{
+    margin-top: 20px;
+    padding: 0;
+}
+
+.foot-menu .sub-menu .sub-link a:hover{
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/*--------x----------- footer ----------x---------*/
+
+
+/*          Viewport less than 892px and equal to 350px     */
+
+@media only screen and (max-width: 892px){
+    .nav{
+        padding: 0;
+    }
+    .nav .nav-menu, .nav .main-menu{
+        flex-direction: column;
+    }
+    .nav .nav-brand img{
+        margin-left: 10px;
+    }
+
+    .nav .toggle-menu{
+        display: initial;
+    }
+    
+}
+
+
+/*    x      Viewport less than 892px   x  */

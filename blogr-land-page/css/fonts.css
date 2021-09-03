@@ -1,0 +1,10 @@
+/* font-family: Ubuntu */
+@font-face{
+    font-family: Ubuntu;
+    src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+/* font-family: Ubuntu */
+@font-face{
+    font-family: Overpass;
+    src: url(../fonts/Overpass/Overpass-Regular.ttf);
+}
